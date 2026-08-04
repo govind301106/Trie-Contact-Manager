@@ -112,7 +112,7 @@ g++ main.cpp Trie.cpp ContactManager.cpp -o TrieContact
 ### Windows
 
 ```bash
-TrieContact.exe
+./TrieContact.exe
 ```
 
 ### Linux / macOS
