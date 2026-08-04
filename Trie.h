@@ -19,9 +19,10 @@ class TrieNode{
 class Trie{
 private:
     TrieNode* root;
-
+    
 public:
     Trie();
+    ~Trie(); 
     void insert(const string& word);
     bool search(const string& word);
     vector<string> startsWith(const string& prefix);
@@ -30,4 +31,5 @@ public:
 private:
     bool removeHelper(TrieNode* node, const string& word, int depth);
     void dfs(TrieNode* node, string& cur, vector<string>& ans);
+    void clear(TrieNode* node); 
 };

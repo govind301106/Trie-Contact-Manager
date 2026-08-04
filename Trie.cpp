@@ -98,3 +98,19 @@ bool Trie::removeHelper(TrieNode* node, const string& word, int depth) {
 
     return false;
 }
+
+Trie::~Trie() {
+    clear(root);
+}
+
+void Trie::clear(TrieNode* node) {
+
+    if (node == nullptr)
+        return;
+
+    for (auto &child : node->children) {
+        clear(child.second);
+    }
+
+    delete node;
+}

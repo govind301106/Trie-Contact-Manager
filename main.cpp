@@ -19,7 +19,14 @@ int main() {
         cout << "6. Exit\n";
         cout << "Enter Choice: ";
 
-        cin >> choice;
+        if (!(cin >> choice)) {
+            cout << "Invalid input! Please enter a number.\n";
+
+            cin.clear();                    // Clear the fail state
+            cin.ignore(10000, '\n');        // Remove the invalid input
+
+            continue;                       // Show the menu again
+        }
 
         switch (choice) {
 
